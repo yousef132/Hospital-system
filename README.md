@@ -1,4 +1,61 @@
 # Hospital-system
-it's a simple project with cpp to organize entry and exit of patients to the clinic .
 
-![Screenshot_20230205_043029](https://user-images.githubusercontent.com/88557193/216826409-b566bf60-28b0-4696-87c7-bd25983ab093.png)
+## 1.0 Overview
+Hospital System information
+
+ - Implement the following system for a hospital
+
+ - There are 20 different specialization (e.g. Children, Surgery, etc)
+
+ - For each specialization, there are only 5 available spots [queue]
+
+ - Adding a patient :
+
+   - Read the requested specialization [1-20].
+   - Read his name and status (0 = regular, 1 = urgent)
+   - If 5 patients exist, apologize and don't accept.
+   - If the user is regular, add in end of queue.therwise, add in Begin
+
+ - Print patients, for the specializations that have waiting patients
+
+ - Dr pickup a patient :
+
+   - Read the requested specialization. If no patients, inform the doctor
+   - Otherwise, ask the patient to go with the Dr. Remove from the queue
+
+
+## 2.0 Functions used in the project
+
+
+### 2.1 Add patient
+
+- Used to add a new patient in the system
+
+Code :
+```
+void add_patient(){
+    cout<<"Entre specialization (1->20), name ,states(0->regular , 1->argent) :\n";
+    cin>>specialization>>name>>states;
+    if(specialization>20||specialization<1){
+        cout<<"Invalid specialization\nEnter number from 1->20";
+        return;
+    }
+    specialization--;
+    if(v[specialization].size()>=5){
+        cout<<"Sorry we can't add more patients for this specialization.\n";
+    }
+    if(v[specialization].size()<5){
+        if(states==1)
+        {
+            v[specialization].push_front(name);
+        }
+        else
+        {
+            v[specialization].push_back(name);
+        }
+    }
+}
+
+```
+
+
