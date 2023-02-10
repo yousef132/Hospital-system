@@ -120,6 +120,8 @@ void get_next_patient(){
 
 ```
 
+
+
 ### 3.0 Notes
 
 I used Deque because it takes O(1) to push_front & pop_front ( in case the patient is urgent ) and O(1) push_back & pop_back ( in case the patient is regular ) and it's useful in our case .
