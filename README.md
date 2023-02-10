@@ -26,6 +26,7 @@ Hospital System information
 
 ## 2.0 Functions used in the project
 
+----
 
 ### 2.1 Add patient
 
@@ -63,6 +64,7 @@ void add_patient(){
 }
 
 ```
+------
 
 ### 2.2 Print all patients
 
@@ -92,6 +94,9 @@ void print_all_patients(){
 
 ```
 
+--------
+
+
 ### 2.3 Get next patient
 
 - Used to :
@@ -120,6 +125,7 @@ void get_next_patient(){
 
 ```
 
+---------------
 
 
 ### 3.0 Notes
